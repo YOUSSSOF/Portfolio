@@ -1,3 +1,0 @@
-Welcome to the Movies Info Website! This website is a comprehensive platform for movie enthusiasts, providing a wealth of information about various movies. Built using the powerful combination of React and Django, this application brings together the best of both worlds to deliver a seamless and engaging user experience.\nSome features are: Elegant UI, Complete server side crud, wishlist and etc.
-
-این وبسایت یک پلتفرم جذاب و کاربردی برای کشف و جستجوی اطلاعات فیلم است. با استفاده از ترکیب قدرتمند React و Django، این وبسایت دارای قابلیت ها و امکانات بسیاری برای علاقه‌مندان به سینما فراهم می‌آورد.\nبعضی از ویژگی ها: رابط کاربری مدرن و جذاب: سرور پیاده سازی شده با جنگو، لیست فیلم های مورد علاقه و ...
