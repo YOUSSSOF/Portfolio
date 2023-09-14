@@ -16,7 +16,7 @@ const YxTabPanel = ({
     "rgba(250, 250, 250, 0.70);"
   );
   return (
-    <TabPanel>
+    <TabPanel >
       <VStack alignItems="start">
         <Text fontSize="1.25em" fontWeight="bold" color={tabColor}>
           {currentPortfolioTitle}

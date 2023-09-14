@@ -15,6 +15,15 @@ import music2 from "./assets/images/portfolio/music2.png";
 import music3 from "./assets/images/portfolio/music3.png";
 import box1 from "./assets/images/portfolio/box1.png";
 import box2 from "./assets/images/portfolio/box2.png";
+import tarkhine1 from "./assets/images/portfolio/tarkhine1.png";
+import tarkhine2 from "./assets/images/portfolio/tarkhine2.png";
+import tarkhine3 from "./assets/images/portfolio/tarkhine3.png";
+import tarkhine4 from "./assets/images/portfolio/tarkhine4.png";
+import par1 from "./assets/images/portfolio/par1.png";
+import par2 from "./assets/images/portfolio/par2.png";
+import por1 from "./assets/images/portfolio/por1.png";
+import por2 from "./assets/images/portfolio/por2.png";
+import por3 from "./assets/images/portfolio/por3.png";
 
 export interface Portfolio {
   id: number;
@@ -32,7 +41,23 @@ export interface Portfolio {
 }
 export const webPortfolios: Portfolio[] = [
   {
-    id: 5,
+    id: 6,
+    faName: "وبسایت پرنیان",
+    enName: "Parnian Website",
+    faStart: "اردیبهشت 1399",
+    enStart: "June 2020",
+    enFinish: "June 2020",
+    faFinish: "اردیبهشت 1399",
+    faDesc:
+      "خدمات حمل هوایی انواع کالا به اقصی نقاط دنیا با وبسایت پرنیان. وبسایت پرنیان طراحی شده با وردپرس،دارای ظاهری شیک و جذاب و تجربه کاربری دلچسب و به یاد ماندنی است. با سرعت بالا تمامی سفارشات خود را در کثری از ثانیه ثبت کنید.",
+    enDesc:
+      "Air transportation services for all kinds of stuff to all parts of the world with Pernian website. Parnian's website, designed with WordPress, has a stylish and attractive appearance and a pleasant and memorable user experience. Register all your orders with highest performance in a few seconds.",
+    githubLink: "#",
+    pictures: [par1, par2],
+    tools: ["WP"],
+  },
+  {
+    id: 7,
     faName: "وبسایت مووی باکس",
     enName: "MovieBox Website",
     faStart: "خرداد 1399",
@@ -40,17 +65,49 @@ export const webPortfolios: Portfolio[] = [
     enFinish: "June 2020",
     faFinish: "تیر 1399",
     faDesc:
-      "این وبسایت یک پلتفرم جذاب و کاربردی برای کشف و جستجوی اطلاعات فیلم است. با استفاده از ترکیب قدرتمند React و Django، این وبسایت دارای قابلیت ها و امکانات بسیاری برای علاقه‌مندان به سینما فراهم می‌آورد.\nبعضی از ویژگی ها: رابط کاربری مدرن و جذاب: سرور پیاده سازی شده با جنگو، لیست فیلم های مورد علاقه و ...",
+      "این وبسایت یک پلتفرم جذاب و کاربردی برای کشف و جستجوی اطلاعات فیلم است. با استفاده از ترکیب قدرتمند React و Django، این وبسایت دارای قابلیت ها و امکانات بسیاری برای علاقه‌مندان به سینما فراهم می‌آورد.\nبعضی از ویژگی ها: رابط کاربری مدرن و جذاب، سرور پیاده سازی شده با جنگو، لیست فیلم های مورد علاقه و ...",
     enDesc:
       "Welcome to the Movies Info Website!. This website is a comprehensive platform for movie enthusiasts, providing a wealth of information about various movies. Built using the powerful combination of React and Django, this application brings together the best of both worlds to deliver a seamless and engaging user experience.\nSome features are: Elegant UI, Complete server side crud, wishlist and etc.",
     githubLink: "#",
     pictures: [box1, box2],
     tools: ["JS", "react", "django"],
   },
+  {
+    id: 8,
+    faName: "وبسایت رزومه",
+    enName: "Portfolio Website",
+    faStart: "تیر 1402",
+    enStart: "June 2022",
+    enFinish: "August 2022",
+    faFinish: "شهریور 1402",
+    faDesc:
+      "وبسایت رزومه شخصی م که الان درحال مشاهده ش هستید، پیاده سازی شده با کتابخونه react و کامپوننت های ChakraUI. توسعه یافته با دو تمِ تاریک و روشن + دو زبان فارسی و انگلیسی.",
+    enDesc:
+      "My personal portfolio website that you're currently browsing. is built with help of react library and ChakraUI components. also has dark-light theme + localization.",
+    githubLink: "#",
+    pictures: [por1, por2, por3],
+    tools: ["JS", "react"],
+  },
 ];
 export const mobilePortfolios: Portfolio[] = [
   {
     id: 1,
+    faName: "ترخینه",
+    enName: "Tarkhine",
+    faStart: "تیر 1402",
+    enStart: "June 2022",
+    faFinish: "شهریور 1402",
+    enFinish: "August 2022",
+    faDesc:
+      "ترخینه، یک اپلیکیشن سفارش غذایِ تماما ایرانی، دوای گرسنگی شما در هر لحظه! توسعه داده شده توسط فریم ورک های فلاتر و جنگو. سمت کلاینت با فریم ورک فلاتر و معماری Bloc، همچنین تمام restful apiها هم با پایتون و توسط فریم ورک جنگو پیاده سازی شدن. برای کسب اطلاعات بیشتر و دانلود نرم افزار به لینک گیت هاب پروژه مراجعه کنید.",
+    enDesc:
+      "Tarkhine, a complete perisan delivery food application, best friend for your hungery moments! built with the help of flutter and django. client side developed with flutter framework and Bloc architecture + django and django rest framework for restful apis. for more information and download apk files please check out github link.",
+    githubLink: "https://github.com/YOUSSSOF/Tarkhine",
+    pictures: [tarkhine1, tarkhine2, tarkhine3, tarkhine4],
+    tools: ["dart", "flutter", "python", "django"],
+  },
+  {
+    id: 2,
     faName: "فروشگاهِ کفش",
     enName: "Shoe Commerce",
     faStart: "آذر 1401",
@@ -66,7 +123,7 @@ export const mobilePortfolios: Portfolio[] = [
     tools: ["dart", "flutter"],
   },
   {
-    id: 2,
+    id: 3,
     faName: "مووی باکس",
     enName: "Movie Box",
     faStart: "مرداد 1401",
@@ -82,7 +139,7 @@ export const mobilePortfolios: Portfolio[] = [
     tools: ["dart", "flutter"],
   },
   {
-    id: 3,
+    id: 4,
     faName: "سفارش غذا",
     enName: "Delivery",
     faStart: "دی 1401",
@@ -98,7 +155,7 @@ export const mobilePortfolios: Portfolio[] = [
     tools: ["dart", "flutter", "python", "fastapi"],
   },
   {
-    id: 4,
+    id: 5,
     faName: "موزیک پلیر",
     enName: "Music Player",
     faStart: "مهر 1401",

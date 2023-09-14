@@ -56,7 +56,7 @@ const YxHome = () => {
         );
         setCurrentPortfolioType("");
         document
-          .getElementById("sec-4")
+          .getElementById("sec-3")
           ?.scrollIntoView({ behavior: "smooth" });
         setTimeout(() => setShowPortfolioDrawer(true), 1000);
       } else if (
