@@ -1,21 +1,15 @@
-import {
-  Box,
-  HStack,
-  Image,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, HStack, Image, useColorModeValue } from "@chakra-ui/react";
 import iran from "../../assets/images/iran.png";
 import usa from "../../assets/images/usa.png";
 import { useYxStore } from "../../store";
 
 const YxLanguageSwitch = () => {
   const { textDirection, setTextDirection } = useYxStore();
-  const primary = useColorModeValue("#6049FF", "rgb(96, 73, 255)");
   const bg = useColorModeValue("white", "#171717");
-    const iconBgColor = useColorModeValue(
-      "rgba(0, 30, 106, 0.05);",
-      "rgba(255,255,255,0.05)"
-    );
+  const iconBgColor = useColorModeValue(
+    "rgba(0, 30, 106, 0.05);",
+    "rgba(255,255,255,0.05)"
+  );
   return (
     <HStack alignSelf="end" justifyContent="start" width="80%" marginTop="1em">
       <Box
@@ -34,12 +28,7 @@ const YxLanguageSwitch = () => {
         />
       </Box>
 
-      <label
-        className="switch"
-        style={{
-          "--primary": primary,
-        }}
-      >
+      <label className="switch">
         <input
           type="checkbox"
           checked={textDirection == "rtl"}

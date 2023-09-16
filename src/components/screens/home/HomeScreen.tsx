@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import HeroSection from "./sections/HeroSection";
 import SkillSection from "./sections/SkillsSection";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import PortfoliosSection from "./sections/PortfoliosSection";
 import EducationalExperienceSection from "./sections/EducationalExperienceSection";
 import YxContactMe from "../../custom/YxContactMe";
@@ -74,12 +74,7 @@ const YxHome = () => {
         setTimeout(() => setShowPortfolioDrawer(true), 1000);
       }
     }
-  }, [
-    setCurrentPortfolioDrawer,
-    setCurrentPortfolioType,
-    setSelectedIndex,
-    setShowPortfolioDrawer,
-  ]);
+  }, [setCurrentPortfolioDrawer, setCurrentPortfolioType, setSelectedIndex, setShowPortfolioDrawer, setTextDirection]);
   return (
     <Box>
       <HeroSection />

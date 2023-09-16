@@ -91,15 +91,18 @@ export function YxCarouselController({
             portfolioType == laptop
               ? webPortfolios.length
               : mobilePortfolios.length,
-        }).map((val, index) => (
-          <Box
-          key={index}
-            height="8px"
-            width="8px"
-            borderRadius={20}
-            bg={getDotsColor(portfolioType, index)}
-          />
-        ))}
+        }).map((val, index) => {
+          void val;
+          return (
+            <Box
+              key={index}
+              height="8px"
+              width="8px"
+              borderRadius={20}
+              bg={getDotsColor(portfolioType, index)}
+            />
+          );
+        })}
       </HStack>
       <HStack>
         <ButtonGroup isAttached>

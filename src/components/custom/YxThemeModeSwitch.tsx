@@ -11,7 +11,6 @@ import sun from "../../assets/icons/sun.svg";
 
 const YxThemeModeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();
-  const primary = useColorModeValue("#6049FF", "rgb(96, 73, 255)");
   const bg = useColorModeValue("white", "#171717");
     const iconBgColor = useColorModeValue(
       "rgba(0, 30, 106, 0.05);",
@@ -38,9 +37,6 @@ const YxThemeModeSwitch = () => {
       </Box>
       <label
         className="switch"
-        style={{
-          "--primary": primary,
-        }}
       >
         <input
           type="checkbox"

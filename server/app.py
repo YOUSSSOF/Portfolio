@@ -1,30 +1,37 @@
-from flask import Flask, request, jsonify
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+from flask import Flask, jsonify, request
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
 
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_DEFAULT_SENDER'] = 'yousofh3443@gmail.com'
 
-@app.route('/send', methods=['POST'])
+mail = Mail(app)
+
+
+@app.route("/send-email", methods=['POST'])
 def send_email():
+    data = request.json
+    name = data['name']
+    email = data['email']
+    subject = data['subject']
+    message = data['message']
+
+    msg = Message(subject=subject, recipients=['yousofh255@gmail.com'])
+    msg.body = f"Name: {name}\nEmail: {email}\nSubject: {subject}\n\nMessage:\n{message}"
+
     try:
-        data = request.json
-
-        recipient_email = data.get('email')
-        subject = data.get('subject')
-        message = data.get('message')
-        sender_email = 'yousofh3443@gmail.com'
-        sender_password = 'yousof1384'
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(sender_email, sender_password)
-        server.sendmail(sender_email, 'yousofh255@gmail.com', message.as_string())
-        server.quit()
-
-        return jsonify({'message': 'Email sent successfully'}), 200
+        mail.send_message()
+        mail.send(msg)
+        return jsonify({'success': 'Message sent successfuly!'}), 200
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error': str(e)}), 400
 
 
 if __name__ == '__main__':

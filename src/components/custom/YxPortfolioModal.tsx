@@ -16,7 +16,6 @@ import { useYxStore } from "../../store";
 import laptop from "../../assets/vectors/laptop.svg";
 import { MdKeyboardArrowLeft } from "@react-icons/all-files/md/MdKeyboardArrowLeft";
 import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowRight";
-import { BsLink } from "@react-icons/all-files/bs/BsLink";
 import { useState } from "react";
 import useLanguageValue from "../../hooks/useLanguageValue";
 import YxSeprator from "./YxSeprator";

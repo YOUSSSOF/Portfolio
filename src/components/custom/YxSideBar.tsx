@@ -4,7 +4,7 @@ import hashtag from "../../assets/icons/hastag.svg";
 import cube from "../../assets/icons/cube.svg";
 import bag from "../../assets/icons/bag.svg";
 import cap from "../../assets/icons/cap.svg";
-import edit from "../../assets/icons/edit.svg";
+// import edit from "../../assets/icons/edit.svg";
 import headset from "../../assets/icons/headset.svg";
 import YxLogo from "./YxLogo";
 import YxButton from "./YxButton";
