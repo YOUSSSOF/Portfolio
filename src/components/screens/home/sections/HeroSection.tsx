@@ -43,7 +43,7 @@ const HeroSection = () => {
     "rgba(255,255,255,0.05)"
   );
   const buttonTextColor = useColorModeValue("rgba(0, 30, 106, 0.80);", "#FFF");
-  const name = useLanguageValue("یوسف هاشم زاده", "YOUSOF HASHEMZADEH");
+  const name = useLanguageValue(" هاشم زاده", "YOUSOF HASHEMZADEH");
   const desc = useLanguageValue(
     "با ترکیبِ علاقه به کامپیوتر و چیز ساختن وارد این حوزه شدم و بعد از بسیاری تلاشهای ناکام در زمینه های مختلف، بخشِ مورد علاقه خودم رو پیدا کردم و شدم یه جوجه برنامه نویسِ فول استک اپلیکیشن های موبایل و وب اپلیکیشن ها:)",
     "with a strong passion for IT and building things, I entered this field and after plenty of time to working on different areas, I finally found my favorite part of this huge field and became a tiny little mobile-web full-stack developer:)"
