@@ -12,6 +12,7 @@ interface Props {
   height?: number;
   width?: string;
   to?: string;
+  download?: boolean;
 }
 
 const YxButton = ({
@@ -24,6 +25,7 @@ const YxButton = ({
   width,
   height,
   to,
+  download,
   onClick,
 }: Props) => {
   const bg = useColorModeValue(
@@ -35,9 +37,10 @@ const YxButton = ({
   return (
     <Link
       href={to}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={download ? "" : "_blank"}
+      rel={download ? "" : "noopener noreferrer"}
       style={{ textDecoration: "none" }}
+      download={download}
     >
       <Button
         width={width}

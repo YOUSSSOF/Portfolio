@@ -9,6 +9,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import linkedin from "../../../../assets/icons/linkedin.svg";
+import insta from "../../../../assets/icons/instagram.svg";
 import github from "../../../../assets/icons/github.svg";
 import telegram from "../../../../assets/icons/telegram.svg";
 import profile from "../../../../assets/images/me.jpg";
@@ -159,7 +160,12 @@ const HeroSection = () => {
                 padding="13px"
                 to="//www.github.com/YOUSSSOF"
               />
-              <YxButton icon={linkedin} padding="13px" />
+              <YxButton
+                icon={insta}
+                padding="13px"
+                to="//www.instagram.com/youdexsof"
+              />
+              {/* <YxButton icon={linkedin} padding="13px" /> */}
               <YxButton
                 icon={telegram}
                 padding="13px"
