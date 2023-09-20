@@ -1,15 +1,13 @@
 from flask import Flask, jsonify, request
 from flask_mail import Mail, Message
 from flask_limiter import Limiter
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-limiter = Limiter(
-    app=app,
-    key_func=lambda: request.remote_addr,
-    default_limits=["1 per 2 minutes"],
-)
 
+cors = CORS(app, resources={
+          r"/send-email/*": {"origins": '*'}})
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')

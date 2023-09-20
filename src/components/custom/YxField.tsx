@@ -2,6 +2,7 @@ import { Input, Textarea, useColorModeValue } from "@chakra-ui/react";
 import { useYxStore } from "../../store";
 import useLanguageValue from "../../hooks/useLanguageValue";
 import { pallet } from "../../theme";
+import { Dispatch, SetStateAction } from "react";
 
 interface Props {
   type?: string;
@@ -9,6 +10,8 @@ interface Props {
   enPlaceholder: string;
   height?: string;
   multiline?: boolean;
+  value: string;
+  setValue: Dispatch<SetStateAction<string>>;
 }
 
 const YxField = ({
@@ -17,30 +20,35 @@ const YxField = ({
   enPlaceholder,
   height,
   multiline,
+  value,
+  setValue,
 }: Props) => {
   const { textDirection } = useYxStore();
   const bg = useColorModeValue(
     "rgba(0, 30, 106, 0.10);",
     "rgba(255, 255, 255, 0.05);"
-  );  const border = useColorModeValue(
+  );
+  const border = useColorModeValue(
     "rgba(0, 0, 0, 0.1);",
     "rgba(255, 255, 255, 0.1);"
   );
   const placeholder = useLanguageValue(faPlaceholder, enPlaceholder);
   if (multiline)
     return (
-        <Textarea
-          height={height}
-          placeholder={placeholder}
-          borderRadius={0}
-          border={`1px solid ${border}`}
-          borderBottom={0}
-          borderLeft={textDirection == "rtl" ? 0 : ""}
-          borderRight={textDirection == "rtl" ? "" : 0}
-          bg={bg}
-          paddingY="1.5em"
-          focusBorderColor={pallet.purple600}
-        />
+      <Textarea
+        height={height}
+        placeholder={placeholder}
+        borderRadius={0}
+        border={`1px solid ${border}`}
+        borderBottom={0}
+        borderLeft={textDirection == "rtl" ? 0 : ""}
+        borderRight={textDirection == "rtl" ? "" : 0}
+        bg={bg}
+        paddingY="1.5em"
+        focusBorderColor={pallet.purple600}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
     );
   return (
     <Input
@@ -55,6 +63,8 @@ const YxField = ({
       bg={bg}
       paddingY="1.5em"
       focusBorderColor={pallet.purple600}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
     />
   );
 };

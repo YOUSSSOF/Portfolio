@@ -5,9 +5,10 @@ import YxHome from "./components/screens/home/HomeScreen";
 import YxSideBar from "./components/custom/YxSideBar";
 import YxFooter from "./components/custom/YxFooter";
 import { useEffect } from "react";
+import YxLoader from "./components/custom/YxLoader";
 
 function App() {
-  const { textDirection } = useYxStore();
+  const { textDirection, showLoader } = useYxStore();
   useEffect(() => {
     const title =
       textDirection == "rtl"
@@ -16,27 +17,31 @@ function App() {
     document.title = title;
   }, [textDirection]);
   return (
-    <div
-      dir={textDirection}
-      style={{
-        WebkitUserSelect: "none",
-        KhtmlUserSelect: "none",
-        MozUserSelect: "none",
-        msUserSelect: "none",
-        userSelect: "none",
-      }}
-    >
-      <Show below="lg">
-        <YxNavBar />
-      </Show>
-      <HStack>
-        <YxHome />
-        <Show above="lg">
-          <YxSideBar />
+    <>
+      {showLoader ? <YxLoader /> : <></>}
+
+      <div
+        dir={textDirection}
+        style={{
+          WebkitUserSelect: "none",
+          KhtmlUserSelect: "none",
+          MozUserSelect: "none",
+          msUserSelect: "none",
+          userSelect: "none",
+        }}
+      >
+        <Show below="lg">
+          <YxNavBar />
         </Show>
-      </HStack>
-      <YxFooter />
-    </div>
+        <HStack>
+          <YxHome />
+          <Show above="lg">
+            <YxSideBar />
+          </Show>
+        </HStack>
+        <YxFooter />
+      </div>
+    </>
   );
 }
 

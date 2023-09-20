@@ -8,7 +8,7 @@ import {
   Show,
   useColorModeValue,
 } from "@chakra-ui/react";
-import linkedin from "../../../../assets/icons/linkedin.svg";
+// import linkedin from "../../../../assets/icons/linkedin.svg";
 import insta from "../../../../assets/icons/instagram.svg";
 import github from "../../../../assets/icons/github.svg";
 import telegram from "../../../../assets/icons/telegram.svg";
