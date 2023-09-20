@@ -1,8 +1,14 @@
 from flask import Flask, jsonify, request
 from flask_mail import Mail, Message
+from flask_limiter import Limiter
 import os
 
 app = Flask(__name__)
+limiter = Limiter(
+    app=app,
+    key_func=lambda: request.remote_addr,
+    default_limits=["1 per 2 minutes"],
+)
 
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
@@ -10,7 +16,7 @@ app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_DEFAULT_SENDER'] = 'yousofh3443@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'portfolio-emails@youdexsof.ir'
 
 mail = Mail(app)
 
@@ -27,11 +33,10 @@ def send_email():
     msg.body = f"Name: {name}\nEmail: {email}\nSubject: {subject}\n\nMessage:\n{message}"
 
     try:
-        mail.send_message()
         mail.send(msg)
         return jsonify({'success': 'Message sent successfuly!'}), 200
     except Exception as e:
-        return jsonify({'error': str(e)}), 400
+        return jsonify({'error': str(e), 'email': email, "name": name}), 400
 
 
 if __name__ == '__main__':
