@@ -50,23 +50,24 @@ const YxField = ({
         onChange={(e) => setValue(e.target.value)}
       />
     );
-  return (
-    <Input
-      height={height}
-      type={type}
-      placeholder={placeholder}
-      borderRadius={0}
-      border={`1px solid ${border}`}
-      borderBottom={0}
-      borderLeft={textDirection == "rtl" ? 0 : ""}
-      borderRight={textDirection == "rtl" ? "" : 0}
-      bg={bg}
-      paddingY="1.5em"
-      focusBorderColor={pallet.purple600}
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-    />
-  );
+  else
+    return (
+      <Input
+        height={height}
+        type={type}
+        placeholder={placeholder}
+        borderRadius={0}
+        border={`1px solid ${border}`}
+        borderBottom={0}
+        borderLeft={textDirection == "rtl" ? 0 : ""}
+        borderRight={textDirection == "rtl" ? "" : 0}
+        bg={bg}
+        paddingY="1.5em"
+        focusBorderColor={pallet.purple600}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    );
 };
 
 export default YxField;

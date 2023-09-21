@@ -79,7 +79,7 @@ const YxContactForm = () => {
               enPlaceholder="message"
               height="30vh"
               setValue={setMessage}
-              value={name}
+              value={message}
             />
           </VStack>
           <Button

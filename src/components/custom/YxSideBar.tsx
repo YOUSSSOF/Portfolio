@@ -4,7 +4,6 @@ import hashtag from "../../assets/icons/hastag.svg";
 import cube from "../../assets/icons/cube.svg";
 import bag from "../../assets/icons/bag.svg";
 import cap from "../../assets/icons/cap.svg";
-
 // import edit from "../../assets/icons/edit.svg";
 import headset from "../../assets/icons/headset.svg";
 import YxLogo from "./YxLogo";
@@ -14,6 +13,8 @@ import { useYxStore } from "../../store";
 import YxLanguageSwitch from "./YxLanguageSwitch";
 import YxThemeModeSwitch from "./YxThemeModeSwitch";
 import useLanguageValue from "../../hooks/useLanguageValue";
+import cv_fa from "../../../cvs/cv-fa.pdf";
+import cv_en from "../../../cvs/cv-en.pdf";
 
 const YxSideBar = () => {
   const { sideBarSelectedINdex, setSelectedIndex } = useYxStore();
@@ -27,7 +28,7 @@ const YxSideBar = () => {
     "rgba(255, 255, 255, 0.10)"
   );
   const { textDirection } = useYxStore();
-  const cv = useLanguageValue("/cvs/cv-fa.pdf", "/cvs/cv-en.pdf");
+  const cv = useLanguageValue(cv_fa, cv_en);
   return (
     <VStack
       height="100vh"

@@ -37,7 +37,7 @@ const YxButton = ({
   return (
     <Link
       href={to}
-      target={download ? "" : "_blank"}
+      target="_blank"
       rel={download ? "" : "noopener noreferrer"}
       style={{ textDecoration: "none" }}
       download={download}
