@@ -126,8 +126,8 @@ const YxPortfolioModal = () => {
             <Image
               alt={alt}
               src={currentPortfolioDrawer.pictures[currentImageIndex]}
-              margin={currentPortfolioType == laptop ? "3vw" : "5vw"}
-              fit="contain"
+              margin={currentPortfolioType == laptop ? "1vw" : "5vw"}
+              fit="cover"
               height={
                 currentPortfolioType == laptop
                   ? {
@@ -149,7 +149,7 @@ const YxPortfolioModal = () => {
               width={
                 currentPortfolioType == laptop
                   ? {
-                      base: "90%",
+                      base: "70%",
                       sm: "40%",
                       md: "60%",
                       lg: "70%",
