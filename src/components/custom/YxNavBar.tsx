@@ -1,4 +1,4 @@
-import {  HStack, useColorModeValue } from "@chakra-ui/react";
+import { HStack, useColorModeValue } from "@chakra-ui/react";
 import YxLogo from "./YxLogo";
 import YxButton from "./YxButton";
 import icon from "../../assets/icons/menu.svg";
@@ -39,6 +39,7 @@ const YxNavBar = () => {
           <YxButton
             faTitle="PDF دانلود رزومه بصورت"
             enTitle="Donwload PDF Resume"
+            download
           />
           <YxButton icon={icon} onClick={() => setShowDrawer(true)} />
         </HStack>
