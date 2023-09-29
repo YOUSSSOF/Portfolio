@@ -102,7 +102,9 @@ export const mobilePortfolios: Portfolio[] = [
       "ترخینه، یک اپلیکیشن سفارش غذایِ تماما ایرانی، دوای گرسنگی شما در هر لحظه! توسعه داده شده توسط فریم ورک های فلاتر و جنگو. سمت کلاینت با فریم ورک فلاتر و معماری Bloc، همچنین تمام restful apiها هم با پایتون و توسط فریم ورک جنگو پیاده سازی شدن. برای کسب اطلاعات بیشتر و دانلود نرم افزار به لینک گیت هاب پروژه مراجعه کنید.",
     enDesc:
       "Tarkhine, a complete perisan delivery food application, best friend for your hungery moments! built with the help of flutter and django. client side developed with flutter framework and Bloc architecture + django and django rest framework for restful apis. for more information and download apk files please check out github link.",
-    githubLink: "https://github.com/YOUSSSOF/Tarkhine",
+    // githubLink: "https://github.com/YOUSSSOF/Tarkhine",
+    githubLink:
+      "https://datastore.storage.iran.liara.space/tarkhine%20app%20fiels/app-release.apk",
     pictures: [tarkhine1, tarkhine2, tarkhine3, tarkhine4],
     tools: ["dart", "flutter", "python", "django"],
   },
